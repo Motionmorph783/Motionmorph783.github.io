@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Free AI Courses – Motion Morph Academy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #020617;
+      border-bottom: 1px solid #1f2937;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header h1 { margin: 4px 0; font-size: 26px; }
+    header p { margin: 0; font-size: 14px; color: #9ca3af; }
+    nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    nav a {
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      background: #111827;
+      color: #e5e7eb;
+      text-decoration: none;
+      border: 1px solid #1f2937;
+    }
+    nav a:hover { background: #1d4ed8; border-color: #1d4ed8; }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    .course {
+      margin-bottom: 32px;
+      padding: 20px;
+      background: #020617;
+      border-radius: 16px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 18px 40px rgba(15,23,42,0.8);
+    }
+    .course-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .course-title {
+      margin: 0;
+      font-size: 22px;
+    }
+    .badge {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: #1e293b;
+      font-size: 11px;
+      color: #9ca3af;
+    }
+    .course-meta {
+      margin-top: 6px;
+      font-size: 13px;
+      color: #9ca3af;
+    }
+
+    details {
+      margin-top: 14px;
+      border-radius: 12px;
+      background: #020617;
+      border: 1px solid #1f2937;
+      padding: 10px 14px;
+    }
+    summary {
+      list-style: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "＋";
+      float: right;
+      font-weight: 400;
+    }
+    details[open] summary::after { content: "–"; }
+    .lesson {
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px dashed #1f2937;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .lesson h4 {
+      margin: 6px 0;
+      font-size: 15px;
+    }
+    .pill-row {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 11px;
+    }
+    .pill {
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #111827;
+      color: #9ca3af;
+      border: 1px solid #1f2937;
+    }
+
+    .quiz {
+      margin-top: 12px;
+      padding: 10px;
+      border-radius: 10px;
+      background: #020617;
+      border: 1px solid #1e293b;
+      font-size: 13px;
+    }
+    .quiz button {
+      margin-top: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: none;
+      background: #1d4ed8;
+      color: #f9fafb;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    .quiz button:hover { background: #2563eb; }
+    .quiz-result {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #a5b4fc;
+    }
+
+    ul { padding-left: 18px; }
+    li { margin-bottom: 4px; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 20px; }
+      .course { padding: 16px; }
+      .course-title { font-size: 18px; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Motion Morph – AI Learning Hub</h1>
+  <p>Access granted after successful payment. Start learning AI & prompt engineering now.</p>
+  <nav>
+    <a href="#course1">AI Basics</a>
+    <a href="#course2">Prompt Engineering</a>
+    <a href="#course3">AI for Business</a>
+  </nav>
+</header>
+
+<main>
+  <!-- COURSE 1 -->
+  <section id="course1" class="course">
+    <div class="course-header">
+      <div>
+        <h2 class="course-title">Course 1: Foundations of Artificial Intelligence</h2>
+        <p class="course-meta">Level: Beginner · Duration: ~3 hours · No coding required</p>
+      </div>
+      <span class="badge">Start here</span>
