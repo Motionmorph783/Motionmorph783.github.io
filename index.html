@@ -2,344 +2,321 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Motion Morph Enterprises - Careers & Login</title>
+  <title>Motion Morph Enterprises – Apply & Pay Registration Fee</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f7fb;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #f3f4f6;
+      color: #111827;
     }
-    h1, h2, h3 { font-family: Arial; }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 20px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
-    }
-    .header {
-      text-align: center;
-      padding-bottom: 10px;
-    }
-    .tagline {
-      font-size: 14px;
-      color: #555;
-    }
-    .section {
-      margin-top: 20px;
-    }
-    .section p {
-      font-size: 14px;
-      line-height: 1.5;
-      color: #333;
-    }
-    .stats {
+    .page {
+      min-height: 100vh;
       display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 10px;
+      justify-content: center;
+      padding: 24px 12px;
     }
-    .stat-box {
-      flex: 1 1 140px;
-      background: #f0f7f3;
-      border-radius: 10px;
-      padding: 10px;
-      text-align: center;
-      border: 1px solid #d9e7dd;
+    .layout {
+      width: 100%;
+      max-width: 1080px;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 20px;
     }
-    .stat-number {
-      font-size: 16px;
-      font-weight: bold;
-      color: #00b140;
+    @media (max-width: 800px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
     }
-    .stat-label {
-      font-size: 12px;
-      color: #555;
+    .panel {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 20px 18px 22px;
+      box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+      border: 1px solid rgba(148,163,184,0.35);
     }
-    .values-list {
-      list-style: none;
-      padding-left: 0;
-      font-size: 14px;
-      margin-top: 8px;
+    .header-main h1 {
+      margin: 0 0 6px;
+      font-size: 24px;
     }
-    .values-list li::before {
-      content: "• ";
-      color: #00b140;
-      font-weight: bold;
+    .header-main p {
+      margin: 0;
+      font-size: 13px;
+      color: #4b5563;
     }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
+    h2 {
+      margin: 18px 0 6px;
+      font-size: 18px;
     }
-    .gallery img {
-      width: calc(33.33% - 7px);
-      min-width: 100px;
-      border-radius: 10px;
-      object-fit: cover;
-      height: 80px;
-    }
-    .reviews {
-      margin-top: 10px;
-    }
-    .review-card {
-      background: #f7f9ff;
-      border-radius: 10px;
-      padding: 10px;
-      margin-bottom: 8px;
-      border: 1px solid #dde3ff;
+    p, li, label, input, textarea, select {
       font-size: 13px;
     }
-    .review-stars {
-      color: #f5b800;
-      font-size: 14px;
-      margin-bottom: 4px;
-    }
+    ul { padding-left: 18px; margin: 6px 0 10px; }
+    li { margin-bottom: 4px; }
+
     input, textarea, select {
       width: 100%;
-      padding: 10px;
-      margin: 6px 0;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      font-size: 13px;
+      padding: 8px 9px;
+      border-radius: 10px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 8px;
+      outline: none;
     }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #00b140;
-      border: none;
-      color: white;
-      font-size: 16px;
-      border-radius: 50px;
-      font-weight: bold;
-      cursor: pointer;
+    input:focus, textarea:focus, select:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 1px rgba(37,99,235,0.35);
     }
-    button:hover {
-      opacity: 0.95;
-    }
+    textarea { min-height: 70px; resize: vertical; }
+
     .small-note {
       font-size: 11px;
-      color: #555;
-      margin-top: 4px;
+      color: #6b7280;
+      margin: 4px 0 10px;
     }
-    .contact p {
-      margin: 4px 0;
+
+    .card-pay {
+      background: radial-gradient(circle at top, #1d4ed8 0, #020617 55%, #000000 100%);
+      color: #e5e7eb;
+      border-radius: 20px;
+      padding: 22px 20px 24px;
+      box-shadow: 0 24px 60px rgba(15,23,42,0.8);
+      border: 1px solid rgba(148,163,184,0.4);
     }
-    @media (max-width: 600px) {
-      .gallery img {
-        width: calc(50% - 6px);
-      }
-      .stat-box {
-        flex: 1 1 45%;
-      }
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+    .logo-circle {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: conic-gradient(from 160deg, #22c55e, #6366f1, #ec4899, #22c55e);
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .logo-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background:#020617;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      letter-spacing:0.05em;
+      color:#e5e7eb;
+    }
+    .brand-text h3 {
+      margin: 0;
+      font-size: 19px;
+    }
+    .brand-text span {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+    .divider {
+      margin: 12px 0 16px;
+      border-bottom: 1px dashed rgba(148,163,184,0.5);
+    }
+    .amount-row {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .amount-label {
+      font-size:13px;
+      color:#9ca3af;
+    }
+    .amount-value {
+      font-size:22px;
+      font-weight:600;
+      color:#f9fafb;
+    }
+    #payBtn {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 999px;
+      border: none;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      background: linear-gradient(135deg,#22c55e,#16a34a);
+      color: #020617;
+      box-shadow: 0 14px 40px rgba(34,197,94,0.45);
+    }
+    #payBtn:active {
+      transform: translateY(1px);
+      box-shadow: 0 8px 24px rgba(34,197,94,0.35);
+    }
+    .secure {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #9ca3af;
+      text-align: center;
+    }
+    .contact {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #9ca3af;
+      text-align: center;
     }
   </style>
 </head>
 
 <body>
 
-<div class="container">
+<div class="page">
+  <div class="layout">
 
-  <!-- Header -->
-  <div class="header">
-    <h1>Start Your Career with Motion Morph Enterprises</h1>
-    <p class="tagline">
-      A genuine corporate-style platform where serious candidates can apply for real opportunities,
-      learn, grow and work with a supportive team.
-    </p>
-  </div>
-
-  <!-- Corporate Intro Section -->
-  <div class="section">
-    <h2>Life & Growth at Motion Morph Enterprises</h2>
-    <p>
-      Motion Morph Enterprises is building a culture where people can learn, grow and work together
-      like a team and a family. We focus on professionalism, clear communication and supportive
-      guidance for both new and experienced members.
-    </p>
-    <ul class="values-list">
-      <li><strong>Teamwork:</strong> we coordinate, help each other and share responsibilities.</li>
-      <li><strong>Learning:</strong> we encourage training, feedback and continuous skill development.</li>
-      <li><strong>Growth:</strong> we aim to offer more responsibility and opportunities over time.</li>
-      <li><strong>Respect:</strong> we promote a safe and respectful work environment for everyone.</li>
-    </ul>
-  </div>
-
-  <!-- About / Values -->
-  <div class="section">
-    <h2>About Motion Morph Enterprises</h2>
-    <p>
-      Motion Morph Enterprises is a growing organization focused on providing professional services
-      with a modern, people-first work culture. We believe in creating a space where every individual
-      can learn, contribute and move ahead in their career.
-    </p>
-
-    <h3>Our Core Values</h3>
-    <ul class="values-list">
-      <li><strong>Professionalism:</strong> clear communication, respect and responsibility.</li>
-      <li><strong>Growth:</strong> encouraging learning, development and new opportunities.</li>
-      <li><strong>Support:</strong> helping each other as one team, like a work family.</li>
-      <li><strong>Transparency:</strong> honest processes in work and hiring.</li>
-    </ul>
-  </div>
-
-  <!-- Mission & Vision -->
-  <div class="section">
-    <h2>Our Mission & Vision</h2>
-    <p>
-      <strong>Mission:</strong> To connect motivated individuals with meaningful roles and provide
-      them a structured, supportive environment to grow their skills and confidence.
-    </p>
-    <p>
-      <strong>Vision:</strong> To build a reliable, growth-oriented organization where people see
-      Motion Morph Enterprises as a trusted partner for building long-term careers.
-    </p>
-  </div>
-
-  <!-- Stats / Company at a Glance -->
-  <div class="section">
-    <h2>Company at a Glance</h2>
-    <p>
-      We are in a strong growth phase and steadily expanding our network of people and projects.
-      Here are some highlights of how we are building Motion Morph Enterprises.
-    </p>
-    <div class="stats">
-      <div class="stat-box">
-        <div class="stat-number">Focused Teams</div>
-        <div class="stat-label">Dedicated roles across operations & coordination.</div>
+    <!-- LEFT: Main site content + form -->
+    <div class="panel">
+      <div class="header-main">
+        <h1>Start Your Career with Motion Morph Enterprises</h1>
+        <p>
+          A structured, professional platform for candidates who are serious about building a long-term career.
+        </p>
       </div>
-      <div class="stat-box">
-        <div class="stat-number">Growing Network</div>
-        <div class="stat-label">We continue to connect with more candidates and partners.</div>
+
+      <div class="section">
+        <h2>About Motion Morph</h2>
+        <p>
+          Motion Morph Enterprises focuses on modern, AI-assisted workflows, digital operations, and consulting-style
+          projects. We look for candidates who are serious, disciplined, and interested in learning and growth.
+        </p>
       </div>
-      <div class="stat-box">
-        <div class="stat-number">Multiple Locations</div>
-        <div class="stat-label">Opportunities may span across different cities & regions.</div>
+
+      <div class="section">
+        <h2>Why a ₹99 Registration Fee?</h2>
+        <p>
+          The ₹99 registration fee is used to filter out non-serious applicants and spam submissions. This small step:
+        </p>
+        <ul>
+          <li>Ensures only genuinely interested candidates apply.</li>
+          <li>Helps us manage time and resources for real applicants.</li>
+          <li>Creates a more professional and focused hiring process.</li>
+        </ul>
+        <p class="small-note">
+          Note: This is a one-time registration fee and is <strong>not a guarantee of selection</strong>. Your profile and performance
+          will still decide the outcome.
+        </p>
       </div>
-      <div class="stat-box">
-        <div class="stat-number">Future Ready</div>
-        <div class="stat-label">Focused on long-term, sustainable career growth.</div>
+
+      <div class="section">
+        <h2>Job Application Form (Step 1)</h2>
+        <p>
+          Fill these details carefully. In Step 2, you will pay the ₹99 registration fee to complete your submission.
+        </p>
+
+        <form id="applyForm">
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email ID" required />
+          <input type="text" placeholder="Mobile Number" required />
+          <input type="text" placeholder="WhatsApp Number" />
+          <input type="text" placeholder="City & State" />
+          <input type="text" placeholder="Highest Education" />
+          <input type="text" placeholder="Year of Passing" />
+          <input type="text" placeholder="Experience in Years (if any)" />
+          <textarea placeholder="Key Skills, Tools, or Experience"></textarea>
+
+          <select>
+            <option>How did you hear about us?</option>
+            <option>Social Media</option>
+            <option>Referral</option>
+            <option>WhatsApp</option>
+            <option>Other</option>
+          </select>
+
+          <p class="small-note">
+            By continuing, you agree to be contacted for job-related communication through the details you have provided.
+          </p>
+
+          <p class="small-note">
+            <strong>Important:</strong> Your information will be considered only after successful ₹99 payment.
+          </p>
+        </form>
+      </div>
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p class="small-note">
+          Email: <strong>motionmorph783@gmail.com</strong><br/>
+          (For job-related queries and support.)
+        </p>
       </div>
     </div>
-  </div>
 
-  <!-- Gallery -->
-  <div class="section">
-    <h2>Our Work Environment</h2>
-    <p>
-      These visuals represent the kind of professional, collaborative work culture that Motion Morph
-      Enterprises aims to build — teamwork, planning, discussion and shared success in a modern setting.
-    </p>
-    <div class="gallery">
-      <img src="https://images.pexels.com/photos/1181533/pexels-photo-1181533.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team working together">
-      <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Office meeting">
-      <img src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Discussion and planning">
-      <img src="https://images.pexels.com/photos/1181400/pexels-photo-1181400.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Team collaboration">
-      <img src="https://images.pexels.com/photos/3861964/pexels-photo-3861964.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Workplace">
-      <img src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Colleagues working">
-    </div>
-  </div>
-
-  <!-- Reviews -->
-  <div class="section">
-    <h2>What People Say</h2>
-    <div class="reviews">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <div>
-          “Professional and supportive environment. The hiring process was clear and I received proper
-          guidance at every step.”
+    <!-- RIGHT: Payment card with Razorpay -->
+    <div class="card-pay">
+      <div class="logo-wrap">
+        <div class="logo-circle">
+          <div class="logo-inner">MM</div>
+        </div>
+        <div class="brand-text">
+          <h3>Motion Morph</h3>
+          <span>AI Consulting & Learning</span>
         </div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
+
+      <div class="divider"></div>
+
+      <div class="amount-row">
         <div>
-          “Good place to learn and grow. Even as a fresher, I got help and direction to improve my skills.”
+          <div class="amount-label">Amount payable</div>
+          <div class="amount-value">₹99.00</div>
+        </div>
+        <div>
+          <span class="amount-label">Purpose</span><br />
+          <span style="font-size:13px;">Registration Fee</span>
         </div>
       </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <div>
-          “Communication was transparent and I always knew what the next step in the process was.”
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <!-- Why Work With Us -->
-  <div class="section">
-    <h2>Why Work With Motion Morph Enterprises?</h2>
-    <ul class="values-list">
-      <li><strong>Structured Opportunities:</strong> clear roles, responsibilities and expectations.</li>
-      <li><strong>Skill Development:</strong> chance to work on tasks that build confidence and experience.</li>
-      <li><strong>Supportive Culture:</strong> guidance for new joiners and open communication.</li>
-      <li><strong>Growth Mindset:</strong> we believe that consistent effort and learning leads to better roles.</li>
-    </ul>
-  </div>
-
-  <!-- Job Application Form -->
-  <div class="section">
-    <h2>Job Application Form</h2>
-    <p>
-      To apply for opportunities at Motion Morph Enterprises, please fill the details below carefully.
-      Our team will review your profile and contact you for suitable roles based on your skills and details.
-    </p>
-
-    <form id="applyForm">
-
-      <input type="text" placeholder="Full Name" required>
-      <input type="email" placeholder="Email ID" required>
-      <input type="text" placeholder="Mobile Number" required>
-      <input type="text" placeholder="WhatsApp Number">
-
-      <input type="text" placeholder="City & State">
-      <input type="text" placeholder="Highest Education">
-      <input type="text" placeholder="Year of Passing">
-      <input type="text" placeholder="Experience in Years">
-
-      <textarea placeholder="Key Skills"></textarea>
-
-      <input type="file">
-
-      <select>
-        <option>How did you hear about us?</option>
-        <option>Social Media</option>
-        <option>Referral</option>
-        <option>WhatsApp</option>
-        <option>Other</option>
-      </select>
-
-      <p class="small-note">
-        By continuing, you agree to be contacted by Motion Morph Enterprises on phone / WhatsApp / email
-        regarding job-related communication.
+      <p style="font-size:13px;color:#d1d5db;margin-bottom:14px;">
+        This one-time registration fee unlocks access to the Motion Morph course page and confirms your application.
       </p>
 
-      <button type="button" onclick="payNow()">Pay ₹99 & Submit Application</button>
-      <p class="small-note">
-        The ₹99 security fee is meant to keep applications serious. Any refund or return policy should be
-        followed as per your actual process. Please make sure you handle this honestly and fairly with all
-        candidates.
-      </p>
+      <button id="payBtn">Pay ₹99 &amp; Continue</button>
 
-    </form>
+      <p class="secure">🔒 Secure payments powered by Razorpay</p>
+
+      <div class="contact">
+        For any payment issue, email: <strong>motionmorph783@gmail.com</strong>
+      </div>
+    </div>
+
   </div>
-
-  <!-- Contact Section -->
-  <div class="section contact">
-    <h2>Contact</h2>
-    <p>Email: <strong>motionmorph783@gmail.com</strong></p>
-    <p>Phone / WhatsApp: <strong>7765010557</strong></p>
-  </div>
-
 </div>
 
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script>
-  function payNow() {
-    alert("Redirecting to secure ₹99 UPI payment...");
-    window.location.href = "upi://pay?pa=piyushkarwaloveyou@ybl&pn=MotionMorph&am=99&cu=INR";
+  var options = {
+      key: "rzp_live_Rmqf5kfVOPB2lZ",
+      amount: 9900,
+      currency: "INR",
+      name: "Motion Morph",
+      description: "Registration Fee",
+      handler: function (response) {
+          window.location.href = "https://coursehtml1.netlify.app/";
+      },
+      prefill: {
+          name: "",
+          email: ""
+      },
+      theme: {
+          color: "#22c55e"
+      }
+  };
+
+  document.getElementById('payBtn').onclick = function(e){
+      var rzp = new Razorpay(options);
+      rzp.open();
+      e.preventDefault();
   }
 </script>
 
