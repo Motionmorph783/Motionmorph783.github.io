@@ -1,182 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Free AI Courses – Motion Morph Academy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <title>Motion Morph – Free AI Course Access</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-    }
-    header {
-      padding: 20px;
-      text-align: center;
       background: #020617;
-      border-bottom: 1px solid #1f2937;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    header h1 { margin: 4px 0; font-size: 26px; }
-    header p { margin: 0; font-size: 14px; color: #9ca3af; }
-    nav {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    nav a {
-      padding: 8px 14px;
-      border-radius: 999px;
-      font-size: 13px;
-      background: #111827;
       color: #e5e7eb;
-      text-decoration: none;
-      border: 1px solid #1f2937;
     }
-    nav a:hover { background: #1d4ed8; border-color: #1d4ed8; }
-
-    main {
-      max-width: 1100px;
+    .wrap {
+      max-width: 960px;
       margin: 0 auto;
-      padding: 24px 16px 40px;
-    }
-
-    .course {
-      margin-bottom: 32px;
-      padding: 20px;
-      background: #020617;
-      border-radius: 16px;
-      border: 1px solid #1f2937;
-      box-shadow: 0 18px 40px rgba(15,23,42,0.8);
-    }
-    .course-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-    .course-title {
-      margin: 0;
-      font-size: 22px;
+      padding: 24px 14px 40px;
     }
     .badge {
+      display: inline-block;
       padding: 4px 10px;
       border-radius: 999px;
-      background: #1e293b;
+      border: 1px solid rgba(148,163,184,0.6);
       font-size: 11px;
       color: #9ca3af;
+      margin-bottom: 10px;
     }
-    .course-meta {
-      margin-top: 6px;
-      font-size: 13px;
-      color: #9ca3af;
+    h1 {
+      margin: 0 0 8px;
+      font-size: 26px;
     }
-
-    details {
-      margin-top: 14px;
-      border-radius: 12px;
-      background: #020617;
-      border: 1px solid #1f2937;
-      padding: 10px 14px;
+    p { font-size: 14px; color: #cbd5f5; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+      gap: 14px;
+      margin-top: 22px;
     }
-    summary {
-      list-style: none;
-      cursor: pointer;
-      font-weight: 600;
-      font-size: 15px;
+    .card {
+      background: radial-gradient(circle at top left,#1d4ed8 0,#020617 45%,#000000 100%);
+      border-radius: 18px;
+      padding: 14px 14px 16px;
+      border: 1px solid rgba(148,163,184,0.4);
+      box-shadow: 0 14px 40px rgba(15,23,42,0.7);
     }
-    summary::-webkit-details-marker { display: none; }
-    summary::after {
-      content: "＋";
-      float: right;
-      font-weight: 400;
+    .card h2 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      color: #e5e7eb;
     }
-    details[open] summary::after { content: "–"; }
-    .lesson {
-      margin-top: 10px;
-      padding-top: 8px;
-      border-top: 1px dashed #1f2937;
-      font-size: 14px;
-      line-height: 1.55;
-    }
-    .lesson h4 {
-      margin: 6px 0;
-      font-size: 15px;
-    }
-    .pill-row {
-      margin-top: 10px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      font-size: 11px;
-    }
-    .pill {
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: #111827;
-      color: #9ca3af;
-      border: 1px solid #1f2937;
-    }
-
-    .quiz {
-      margin-top: 12px;
-      padding: 10px;
-      border-radius: 10px;
-      background: #020617;
-      border: 1px solid #1e293b;
+    .card p {
+      margin: 0 0 8px;
       font-size: 13px;
     }
-    .quiz button {
-      margin-top: 6px;
-      padding: 6px 10px;
-      border-radius: 999px;
-      border: none;
-      background: #1d4ed8;
-      color: #f9fafb;
-      font-size: 12px;
-      cursor: pointer;
-    }
-    .quiz button:hover { background: #2563eb; }
-    .quiz-result {
-      margin-top: 6px;
-      font-size: 12px;
-      color: #a5b4fc;
-    }
-
-    ul { padding-left: 18px; }
+    ul { margin: 0; padding-left: 16px; font-size: 13px; }
     li { margin-bottom: 4px; }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 20px; }
-      .course { padding: 16px; }
-      .course-title { font-size: 18px; }
+    .footer-note {
+      margin-top: 26px;
+      font-size: 12px;
+      color: #9ca3af;
+      border-top: 1px dashed rgba(148,163,184,0.4);
+      padding-top: 12px;
+    }
+    a.btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(148,163,184,0.7);
+      font-size: 12px;
+      text-decoration: none;
+      color: #e5e7eb;
     }
   </style>
 </head>
 <body>
-<header>
-  <h1>Motion Morph – AI Learning Hub</h1>
-  <p>Access granted after successful payment. Start learning AI & prompt engineering now.</p>
-  <nav>
-    <a href="#course1">AI Basics</a>
-    <a href="#course2">Prompt Engineering</a>
-    <a href="#course3">AI for Business</a>
-  </nav>
-</header>
+<div class="wrap">
+  <span class="badge">Access Granted – Registration Complete ✅</span>
+  <h1>Welcome to Motion Morph AI Learning Space</h1>
+  <p>
+    Thank you for completing your registration. Below are your free learning modules.
+    Go through them carefully and apply whatever you learn – this will help you in your future work and interviews.
+  </p>
 
-<main>
-  <!-- COURSE 1 -->
-  <section id="course1" class="course">
-    <div class="course-header">
-      <div>
-        <h2 class="course-title">Course 1: Foundations of Artificial Intelligence</h2>
-        <p class="course-meta">Level: Beginner · Duration: ~3 hours · No coding required</p>
-      </div>
-      <span class="badge">Start here</span>
+  <div class="cards">
+    <div class="card">
+      <h2>Module 1 – AI Basics & Mindset</h2>
+      <p>Understand what AI can and cannot do, and how to think like an AI-assisted professional.</p>
+      <ul>
+        <li>What is AI, ML, and automation (simple language)</li>
+        <li>How companies actually use tools like ChatGPT</li>
+        <li>How to ask good prompts & questions</li>
+      </ul>
+      <!-- Yahan baad me YouTube link ya PDF ka link add kar sakti ho -->
+    </div>
+
+    <div class="card">
+      <h2>Module 2 – Practical AI for Office Work</h2>
+      <p>Learn how to use AI for real daily tasks like email, reports, and planning.</p>
+      <ul>
+        <li>Drafting mails and client replies</li>
+        <li>Creating summaries and basic reports</li>
+        <li>Making checklists and SOP outlines</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Module 3 – Professional Behaviour & Communication</h2>
+      <p>Soft skills that Motion Morph expects from serious candidates.</p>
+      <ul>
+        <li>How to respond on WhatsApp / email professionally</li>
+        <li>How to give daily updates</li>
+        <li>Basics of time management</li>
+      </ul>
+    </div>
+  </div>
+
+  <p class="footer-note">
+    You can bookmark this page: <strong>motionmorph783.github.io/course.html</strong><br/>
+    For job-related communication or doubts about the course, email:
+    <strong>motionmorph783@gmail.com</strong>.
+  </p>
+</div>
+</body>
+</html>
