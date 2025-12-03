@@ -26,9 +26,7 @@
       gap: 20px;
     }
     @media (max-width: 800px) {
-      .layout {
-        grid-template-columns: 1fr;
-      }
+      .layout { grid-template-columns: 1fr; }
     }
     .panel {
       background: #ffffff;
@@ -46,35 +44,20 @@
       font-size: 13px;
       color: #4b5563;
     }
-    h2 {
-      margin: 18px 0 6px;
-      font-size: 18px;
-    }
-    p, li, label, input, textarea, select {
-      font-size: 13px;
-    }
+    h2 { margin: 18px 0 6px; font-size: 18px; }
+    p, li, input, textarea, select { font-size: 13px; }
     ul { padding-left: 18px; margin: 6px 0 10px; }
     li { margin-bottom: 4px; }
-
     input, textarea, select {
-      width: 100%;
-      padding: 8px 9px;
-      border-radius: 10px;
-      border: 1px solid #d1d5db;
-      margin-bottom: 8px;
-      outline: none;
+      width: 100%; padding: 8px 9px; border-radius: 10px;
+      border: 1px solid #d1d5db; margin-bottom: 8px; outline: none;
     }
     input:focus, textarea:focus, select:focus {
       border-color: #2563eb;
       box-shadow: 0 0 0 1px rgba(37,99,235,0.35);
     }
     textarea { min-height: 70px; resize: vertical; }
-
-    .small-note {
-      font-size: 11px;
-      color: #6b7280;
-      margin: 4px 0 10px;
-    }
+    .small-note { font-size: 11px; color: #6b7280; margin: 4px 0 10px; }
 
     .card-pay {
       background: radial-gradient(circle at top, #1d4ed8 0, #020617 55%, #000000 100%);
@@ -84,180 +67,95 @@
       box-shadow: 0 24px 60px rgba(15,23,42,0.8);
       border: 1px solid rgba(148,163,184,0.4);
     }
-    .logo-wrap {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
+    .logo-wrap { display:flex; align-items:center; gap:12px; margin-bottom:10px; }
     .logo-circle {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: conic-gradient(from 160deg, #22c55e, #6366f1, #ec4899, #22c55e);
-      padding: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      width:48px;height:48px;border-radius:50%;
+      background:conic-gradient(from160deg,#22c55e,#6366f1,#ec4899,#22c55e);
+      padding:2px;display:flex;align-items:center;justify-content:center;
     }
     .logo-inner {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      background:#020617;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-weight:700;
-      letter-spacing:0.05em;
-      color:#e5e7eb;
+      width:100%;height:100%;border-radius:50%;background:#020617;
+      display:flex;align-items:center;justify-content:center;
+      font-weight:700;letter-spacing:0.05em;color:#e5e7eb;
     }
-    .brand-text h3 {
-      margin: 0;
-      font-size: 19px;
-    }
-    .brand-text span {
-      font-size: 11px;
-      color: #9ca3af;
-    }
-    .divider {
-      margin: 12px 0 16px;
-      border-bottom: 1px dashed rgba(148,163,184,0.5);
-    }
-    .amount-row {
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      margin-bottom:10px;
-    }
-    .amount-label {
-      font-size:13px;
-      color:#9ca3af;
-    }
-    .amount-value {
-      font-size:22px;
-      font-weight:600;
-      color:#f9fafb;
-    }
+    .brand-text h3 { margin:0;font-size:19px; }
+    .brand-text span { font-size:11px;color:#9ca3af; }
+    .divider { margin:12px 0 16px; border-bottom:1px dashed rgba(148,163,184,0.5); }
+    .amount-row { display:flex;justify-content:space-between;align-items:center;margin-bottom:10px; }
+    .amount-label { font-size:13px;color:#9ca3af; }
+    .amount-value { font-size:22px;font-weight:600;color:#f9fafb; }
     #payBtn {
-      width: 100%;
-      padding: 12px 16px;
-      border-radius: 999px;
-      border: none;
-      font-size: 15px;
-      font-weight: 600;
-      cursor: pointer;
-      background: linear-gradient(135deg,#22c55e,#16a34a);
-      color: #020617;
-      box-shadow: 0 14px 40px rgba(34,197,94,0.45);
+      width:100%;padding:12px 16px;border-radius:999px;border:none;
+      font-size:15px;font-weight:600;cursor:pointer;
+      background:linear-gradient(135deg,#22c55e,#16a34a);color:#020617;
+      box-shadow:0 14px 40px rgba(34,197,94,0.45);
     }
-    #payBtn:active {
-      transform: translateY(1px);
-      box-shadow: 0 8px 24px rgba(34,197,94,0.35);
-    }
-    .secure {
-      margin-top: 10px;
-      font-size: 11px;
-      color: #9ca3af;
-      text-align: center;
-    }
-    .contact {
-      margin-top: 12px;
-      font-size: 12px;
-      color: #9ca3af;
-      text-align: center;
-    }
+    #payBtn:active { transform:translateY(1px);box-shadow:0 8px 24px rgba(34,197,94,0.35);}
+    .secure { margin-top:10px;font-size:11px;color:#9ca3af;text-align:center;}
+    .contact { margin-top:12px;font-size:12px;color:#9ca3af;text-align:center;}
   </style>
 </head>
-
 <body>
-
 <div class="page">
   <div class="layout">
 
-    <!-- LEFT: Main site content + form -->
     <div class="panel">
       <div class="header-main">
         <h1>Start Your Career with Motion Morph Enterprises</h1>
-        <p>
-          A structured, professional platform for candidates who are serious about building a long-term career.
-        </p>
+        <p>A structured, professional platform for candidates who are serious about building a long-term career.</p>
       </div>
 
-      <div class="section">
-        <h2>About Motion Morph</h2>
-        <p>
-          Motion Morph Enterprises focuses on modern, AI-assisted workflows, digital operations, and consulting-style
-          projects. We look for candidates who are serious, disciplined, and interested in learning and growth.
-        </p>
-      </div>
+      <h2>About Motion Morph</h2>
+      <p>Motion Morph Enterprises focuses on modern, AI-assisted workflows, digital operations, and consulting-style
+      projects. We look for candidates who are serious, disciplined, and interested in learning and growth.</p>
 
-      <div class="section">
-        <h2>Why a ₹99 Registration Fee?</h2>
-        <p>
-          The ₹99 registration fee is used to filter out non-serious applicants and spam submissions. This small step:
-        </p>
-        <ul>
-          <li>Ensures only genuinely interested candidates apply.</li>
-          <li>Helps us manage time and resources for real applicants.</li>
-          <li>Creates a more professional and focused hiring process.</li>
-        </ul>
+      <h2>Why a ₹99 Registration Fee?</h2>
+      <p>The ₹99 registration fee is used to filter out non-serious applicants and spam submissions:</p>
+      <ul>
+        <li>Ensures only genuinely interested candidates apply.</li>
+        <li>Helps us manage time and resources for real applicants.</li>
+        <li>Creates a more professional and focused hiring process.</li>
+      </ul>
+      <p class="small-note"><strong>Note:</strong> This is a one-time registration fee and is not a guarantee of selection.</p>
+
+      <h2>Job Application Form (Step 1)</h2>
+      <p>Fill these details carefully. In Step 2, you will pay the ₹99 registration fee to complete your submission.</p>
+
+      <form id="applyForm">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email ID" required />
+        <input type="text" placeholder="Mobile Number" required />
+        <input type="text" placeholder="WhatsApp Number" />
+        <input type="text" placeholder="City & State" />
+        <input type="text" placeholder="Highest Education" />
+        <input type="text" placeholder="Year of Passing" />
+        <input type="text" placeholder="Experience in Years (if any)" />
+        <textarea placeholder="Key Skills, Tools, or Experience"></textarea>
+
+        <select>
+          <option>How did you hear about us?</option>
+          <option>Social Media</option>
+          <option>Referral</option>
+          <option>WhatsApp</option>
+          <option>Other</option>
+        </select>
+
         <p class="small-note">
-          Note: This is a one-time registration fee and is <strong>not a guarantee of selection</strong>. Your profile and performance
-          will still decide the outcome.
+          By continuing, you agree to be contacted for job-related communication through the details you have provided.
+          Your information will be considered only after successful ₹99 payment.
         </p>
-      </div>
+      </form>
 
-      <div class="section">
-        <h2>Job Application Form (Step 1)</h2>
-        <p>
-          Fill these details carefully. In Step 2, you will pay the ₹99 registration fee to complete your submission.
-        </p>
-
-        <form id="applyForm">
-          <input type="text" placeholder="Full Name" required />
-          <input type="email" placeholder="Email ID" required />
-          <input type="text" placeholder="Mobile Number" required />
-          <input type="text" placeholder="WhatsApp Number" />
-          <input type="text" placeholder="City & State" />
-          <input type="text" placeholder="Highest Education" />
-          <input type="text" placeholder="Year of Passing" />
-          <input type="text" placeholder="Experience in Years (if any)" />
-          <textarea placeholder="Key Skills, Tools, or Experience"></textarea>
-
-          <select>
-            <option>How did you hear about us?</option>
-            <option>Social Media</option>
-            <option>Referral</option>
-            <option>WhatsApp</option>
-            <option>Other</option>
-          </select>
-
-          <p class="small-note">
-            By continuing, you agree to be contacted for job-related communication through the details you have provided.
-          </p>
-
-          <p class="small-note">
-            <strong>Important:</strong> Your information will be considered only after successful ₹99 payment.
-          </p>
-        </form>
-      </div>
-
-      <div class="section">
-        <h2>Contact</h2>
-        <p class="small-note">
-          Email: <strong>motionmorph783@gmail.com</strong><br/>
-          (For job-related queries and support.)
-        </p>
-      </div>
+      <h2>Contact</h2>
+      <p class="small-note">
+        Email: <strong>motionmorph783@gmail.com</strong><br/>
+        (For job-related queries and support.)
+      </p>
     </div>
 
-    <!-- RIGHT: Payment card with Razorpay -->
     <div class="card-pay">
       <div class="logo-wrap">
-        <div class="logo-circle">
-          <div class="logo-inner">MM</div>
-        </div>
+        <div class="logo-circle"><div class="logo-inner">MM</div></div>
         <div class="brand-text">
           <h3>Motion Morph</h3>
           <span>AI Consulting & Learning</span>
@@ -284,10 +182,7 @@
       <button id="payBtn">Pay ₹99 &amp; Continue</button>
 
       <p class="secure">🔒 Secure payments powered by Razorpay</p>
-
-      <div class="contact">
-        For any payment issue, email: <strong>motionmorph783@gmail.com</strong>
-      </div>
+      <div class="contact">For any payment issue, email: <strong>motionmorph783@gmail.com</strong></div>
     </div>
 
   </div>
@@ -304,21 +199,13 @@
       handler: function (response) {
           window.location.href = "https://coursehtml1.netlify.app/";
       },
-      prefill: {
-          name: "",
-          email: ""
-      },
-      theme: {
-          color: "#22c55e"
-      }
+      theme: { color: "#22c55e" }
   };
-
   document.getElementById('payBtn').onclick = function(e){
       var rzp = new Razorpay(options);
       rzp.open();
       e.preventDefault();
   }
 </script>
-
 </body>
 </html>
