@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Motion Morph Enterprises - Careers & Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+    }
+    h1, h2, h3 { font-family: Arial; }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    }
+    .header {
+      text-align: center;
+      padding-bottom: 10px;
+    }
+    .tagline { font-size: 14px; color: #555; }
+    .section { margin-top: 20px; }
+    .section p { font-size: 14px; line-height: 1.5; color: #333; }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00b140;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 50px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover { opacity: 0.95; }
+
+    .small-note { font-size: 11px; color: #555; margin-top: 4px; }
+    .contact p { margin: 4px 0; }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Start Your Career with Motion Morph Enterprises</h1>
+    <p class="tagline">
+      A genuine corporate-style platform where serious candidates can apply for real opportunities.
+    </p>
+  </div>
+
+  <!-- ABOUT CONTENT (unchanged) -->
+  <!-- Everything remains same above form... -->
+
+  <!-- Job Application Form -->
+  <div class="section">
+    <h2>Job Application Form</h2>
+    <p>
+      Fill in your details carefully, then pay ₹99 to submit your application.
+    </p>
+
+    <form id="applyForm">
+
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email ID" required>
+      <input type="text" placeholder="Mobile Number" required>
+      <input type="text" placeholder="WhatsApp Number">
+      <input type="text" placeholder="City & State">
+      <input type="text" placeholder="Highest Education">
+      <input type="text" placeholder="Year of Passing">
+      <input type="text" placeholder="Experience in Years">
+      <textarea placeholder="Key Skills"></textarea>
+      <input type="file">
+
+      <select>
+        <option>How did you hear about us?</option>
+        <option>Social Media</option>
+        <option>Referral</option>
+        <option>WhatsApp</option>
+        <option>Other</option>
+      </select>
+
+      <p class="small-note">
+        By continuing, you agree to be contacted regarding job communication.
+      </p>
+
+      <!-- NEW PAYMENT BUTTON -->
+      <button type="button" onclick="goToPayment()">Pay ₹99 & Submit Application</button>
+
+      <p class="small-note">
+        The ₹99 fee ensures only serious candidates apply.
+      </p>
+
+    </form>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="section contact">
+    <h2>Contact</h2>
+    <p>Email: <strong>motionmorph783@gmail.com</strong></p>
+    <!-- Removed phone number for safety -->
+  </div>
+
+</div>
+
+<script>
+  function goToPayment() {
+    alert("Redirecting to secure ₹99 payment...");
+    // GO TO YOUR PAYMENT PORTAL
+    window.location.href = "https://indexhtml6.netlify.app/";
+  }
+</script>
+
+</body>
+</html>
